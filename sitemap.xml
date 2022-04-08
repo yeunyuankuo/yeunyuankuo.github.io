@@ -3,70 +3,70 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dailycoder/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2022-04-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dailycoder/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dailycoder/tags/go/</loc>
+    <loc>/tags/go/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dailycoder/categories/go/</loc>
+    <loc>/categories/go/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dailycoder/tags/interview/</loc>
+    <loc>/tags/interview/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dailycoder/</loc>
+    <loc>/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dailycoder/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dailycoder/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dailycoder/2022/03/goroutine-lightweight/</loc>
+    <loc>/2022/03/goroutine-lightweight/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dailycoder/series/</loc>
+    <loc>/series/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
