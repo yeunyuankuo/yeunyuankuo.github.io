@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Jessie Kuo</title>
+    <link>https://dailycoder/series/</link>
+    <description>Recent content in Series on Jessie Kuo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+        <atom:link href="https://dailycoder/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://dailycoder/about/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dailycoder/about/</guid>
+      <description>Hello there 👋 , nice to meet you virtually! My name is Jessie Kuo. I am a full-time software engineer, coffee drinker, and part-time blogger, who writes about programming, technologies, and interview questions (basically anything that I find interesting).
+ Thank you for stopping by and I hope to see you soon with my new article!
+  Happy Coding! Cheers! 🍺 🍺 🍺
+ Reach Me Here:  Medium: https://medium.</description>
+    </item>
+    
+    <item>
+      <title>Why is goroutine being called a “lightweight” thread?</title>
+      <link>https://dailycoder/2022/03/goroutine-lightweight/</link>
+      <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dailycoder/2022/03/goroutine-lightweight/</guid>
+      <description>I was asked this question in one of my recent software engineer job interviews, and I believe I didn’t answer it as well as I would have liked, so I wanted to write this blog to re-answer it and perhaps aid someone else who is also curious about the solution.
+ In Go articles, we often see goroutine introduced as a lightweight thread. But why is it lightweight? how lightweight?</description>
+    </item>
+    
+  </channel>
+</rss>
