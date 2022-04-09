@@ -273,6 +273,8 @@ function tagCloud(where, min, max) {
     <a class="article-tag-link" href="/tags/interview/"> Interview </a>
   </span>
 
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2022/03/goroutine-lightweight/#comments"
+            class="article-comment-link">Comments</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 660 words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 4 minutes </span>
       </div>
@@ -322,6 +324,12 @@ The expression must be a function or method call; it cannot be parenthesized. Ca
 
     </div>
   </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
     <div class="bar-inner">
         <ul class="pager pull-left">
@@ -414,6 +422,18 @@ The expression must be a function or method call; it cannot be parenthesized. Ca
     });
 </script>
 
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/yeunyuankuo.github.io\/2022\/03\/goroutine-lightweight\/';
+        this.page.identifier = 'yeunyuankuo';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'yeunyuankuo' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
   
   
