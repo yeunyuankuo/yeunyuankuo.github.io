@@ -308,13 +308,13 @@ The expression must be a function or method call; it cannot be parenthesized. Ca
 <h2 id="wrapping-up">Wrapping Up</h2>
 <p>In Summary, to answer the question of why goroutine is called a lightweight thread. It’s because a <strong>goroutine starts with a stack space of 2KB</strong> which is extremely smaller and more compact than OS thread&rsquo;s fixed-size stack space of 2MB. However, the <strong>goroutine’s stack space is growable</strong> and it can grow and exceed the OS thread’s 2MB fixed-stack size. So a goroutine is actually only “lightweight” in the beginning and could gradually grow “overweight” when needed!</p>
 <h2 id="resources">Resources</h2>
-<ul>
+<ol>
 <li><a href="https://go.dev/ref/spec">Official Go Specs</a></li>
 <li><a href="https://www.gopl.io/">The Go Programming Language — Alan A. A. Donovan and Brian W. Kernighan</a></li>
 <li><a href="http://www.csl.ece.upatras.gr/os/Silberschatz.pdf">Operating System Concepts — Abraham Silberschatz, Greg Gagne, and Peter Baer Galvin</a></li>
 <li><a href="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/">Professor Dr. John Bell’s lecture notes for Operating Systems</a></li>
 <li><a href="https://yourbasic.org/golang/goroutines-explained/">Goroutines are lightweight threads</a></li>
-</ul>
+</ol>
 <hr>
 <h3 id="thank-you-for-reading-"><em>Thank you for reading!</em> 🌟</h3>
 <p>If you find this article interesting feel free to leave a comment!</p>
