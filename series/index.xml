@@ -11,6 +11,16 @@
     
     
     <item>
+      <title>Why is Containerization Taking Over?</title>
+      <link>https://yeunyuankuo.github.io/2022/04/container_taking_over/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeunyuankuo.github.io/2022/04/container_taking_over/</guid>
+      <description>“An important sign of Kubernetes momentum is the continuing shift to production, growing from 59% in the 2020 report to 65% this year. Companies with more than 500 developers were more likely to be running all or most containerized workloads in production (78%). In our first State of Kubernetes report in 2018, less than a third (30%) reported running Kubernetes in production.”
+— State of Kubernetes 2021 Report by VMware</description>
+    </item>
+    
+    <item>
       <title>About Me</title>
       <link>https://yeunyuankuo.github.io/about/</link>
       <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
