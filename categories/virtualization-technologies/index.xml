@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Step-by-Step Guide—How to create a new branch for Git repository</title>
+      <link>https://yeunyuankuo.github.io/2022/05/create_git_branch/</link>
+      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeunyuankuo.github.io/2022/05/create_git_branch/</guid>
+      <description>1. Clone Target Repository Clone the remote repository code you want to your local environment. You can find the clone repo link inside the Code button drop-down.
+cd into the folder you want to clone the repository, then paste the HTTPS link and created a clone with the git clone command.
+$ git clone {HTTPS_LINK_HERE}  After running the git clone command, you should see a new folder with the target repo code inside.</description>
+    </item>
+    
+    <item>
       <title>Why is Containerization Taking Over?</title>
       <link>https://yeunyuankuo.github.io/2022/04/container_taking_over/</link>
       <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
