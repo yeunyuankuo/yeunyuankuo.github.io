@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>&gt; jessie_kuo</title>
-    <link>https://yeunyuankuo.github.io/</link>
-    <description>Recent content on &gt; jessie_kuo</description>
+    <title>Cloud on &gt; jessie_kuo</title>
+    <link>https://yeunyuankuo.github.io/tags/cloud/</link>
+    <description>Recent content in Cloud on &gt; jessie_kuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jun 2022 20:00:15 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Sun, 12 Jun 2022 20:00:15 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Learn AWS IAM (1) - IAM Users, Groups, Credentials</title>
       <link>https://yeunyuankuo.github.io/posts/iam/</link>
       <pubDate>Sun, 12 Jun 2022 20:00:15 +0800</pubDate>
       
       <guid>https://yeunyuankuo.github.io/posts/iam/</guid>
       <description>What is IAM? In AWS, IAM stands for Identity and Access Management (IAM). It is used to help users securely control access to AWS resources. Everything you do in AWS needs permission, which means that you will eventually encounter or use IAM features when building your own AWS services. IAM features includes deciding things like: who is eligible to sign-in, and who or what has permissions to use resources, etc.</description>
-    </item>
-    
-    <item>
-      <title>Archives</title>
-      <link>https://yeunyuankuo.github.io/archives/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yeunyuankuo.github.io/archives/</guid>
-      <description>archives</description>
     </item>
     
     
