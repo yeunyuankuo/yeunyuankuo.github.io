@@ -1,0 +1,84 @@
+/* This is empty CSS file intended to be overwritten by user's custom CSS file */
+
+
+
+/* ============= Device specific fixes ======= */
+
+/* Large screens such as TV */
+@media only screen and (min-width: 1824px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+/* IPad Pro */
+@media (max-width: 1024px) {
+}
+
+/*  Large devices (desktops, 992px and up) */
+
+@media (max-width: 992px) {
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        height: auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media only screen and (max-width: 768px) {
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        height: auto;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media only screen and (max-width: 576px) {
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: auto;
+    }
+}
+
+/* iPhoneX, iPhone 6,7,8 */
+@media only screen and (max-width: 375px) {
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: auto;
+    }
+}
+
+/* Galaxy S5, Moto G4 */
+@media only screen and (max-width: 360px) {
+}
+
+/* iPhone 5 or before */
+@media only screen and (max-width: 320px) {
+}

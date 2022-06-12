@@ -1,0 +1,290 @@
+.archive-posts {
+    width: 100%;
+    font-size: 16px !important;
+}
+
+.archive-year {
+    margin-top: 40px;
+    /* margin-bottom: 40px; */
+}
+
+.archive-year:not(:last-of-type) {
+    border-bottom: 1px solid;
+    border-bottom-color: rgb(179, 179, 179);
+}
+
+.archive-month {
+    display: flex;
+    align-items: flex-start;
+    /* padding: 10px 0; */
+    padding-bottom: 20px;
+}
+
+.archive-month-header {
+    margin: 20px 0;
+    width: 200px;
+}
+
+.archive-month:not(:last-of-type) {
+    border-bottom: 1px solid var(--border);
+}
+
+.archive-entry {
+    position: relative;
+    padding: 5px;
+    margin: 10px 0;
+}
+.archive-entry a, .entry-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 10; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.archive-entry-title {
+    margin: 5px 0;
+    /* font-weight: 400 !important; */
+}
+
+.archive-count,
+.archive-meta {
+    color: var(--secondary);
+    font-size: 14px !important;
+}
+
+#archive-title {
+    font-weight: bold;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.wrapper {
+    flex: 1;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+h3 {
+    font-weight: 600;
+}
+h4 {
+    font-weight: 300;
+}
+
+/* ============= Device specific fixes ======= */
+
+/* Large screens such as TV */
+@media only screen and (min-width: 1824px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1400px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: auto;
+    }
+}
+
+/* IPad Pro */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: auto;
+    }
+}
+
+/*  Large devices (desktops, 992px and up) */
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media only screen and (max-width: 768px) {
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media only screen and (max-width: 576px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+    #archive_lists {
+        padding-top: 100px !important;
+        display: block;
+        margin-top: 50px !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: auto;
+    }
+}
+
+/* iPhoneX, iPhone 6,7,8 */
+@media only screen and (max-width: 375px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    h4 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Galaxy S5, Moto G4 */
+@media only screen and (max-width: 360px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    h4 {
+        font-size: 0.7rem;
+    }
+}
+
+/* iPhone 5 or before */
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 0.9rem;
+    }
+    h3 {
+        font-size: 0.8rem;
+    }
+    h4 {
+        font-size: 0.4rem;
+    }
+}
