@@ -6,13 +6,13 @@
     <description>Recent content in Posts on &gt; jessie_kuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 May 2022 19:06:49 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
-      <title>Step-by-Step Guide—How to create a new branch for Git repository</title>
-      <link>https://yeunyuankuo.github.io/posts/create_git_branch/</link>
-      <pubDate>Sun, 29 May 2022 19:06:49 +0800</pubDate>
+    <lastBuildDate>Sun, 12 Jun 2022 20:00:15 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Learn AWS IAM (1) - IAM Users, Groups, Credentials</title>
+      <link>https://yeunyuankuo.github.io/posts/iam/</link>
+      <pubDate>Sun, 12 Jun 2022 20:00:15 +0800</pubDate>
       
-      <guid>https://yeunyuankuo.github.io/posts/create_git_branch/</guid>
-      <description>We can push our new branch to the repository with the git push command. But here we also want to set the upstream branch. Every time a new branch is created, we need to set up an upstream branch so the new branch knows which remote repository to use every time it synchronizes its commit history. This step can be achieved with the &amp;ndash;set-upstream command.</description>
+      <guid>https://yeunyuankuo.github.io/posts/iam/</guid>
+      <description>What is AWS IAM? In AWS, Identity and Access Management (IAM) is one of the AWS services and it is used to help users securely control access to AWS resources. Everything you do in AWS needs permission, which means that you will eventually encounter or use IAM features when building your own AWS services. IAM features include determining who is eligible to sign in, who or what has access to resources, and so on.</description>
     </item>
     
     
