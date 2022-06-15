@@ -205,26 +205,50 @@ if (!doNotTrack) {
 <p>IAM user is an entity in AWS that you create to represent the person or application that interacts with AWS. AWS users are made up of a name and credentials.</p>
 <h4 id="iam-user-main-concepts">IAM User Main Concepts:</h4>
 <ul>
-<li>Brand new IAM users by default has no permissions</li>
-<li>permission boundary can be add to a user</li>
-<li>Each IAM user is associated with one and only one root user</li>
-<li>When creating a IAM user, IAM username isn&rsquo;t capitlization sensitive (meaning <code>Bob</code> equals <code>bob</code>)</li>
+<li>
+<p>Brand new IAM users by default has no permissions</p>
+</li>
+<li>
+<p>permission boundary can be add to a user</p>
+</li>
+<li>
+<p>Each IAM user is associated with one and only one root user</p>
+</li>
+<li>
+<p>When creating a IAM user, IAM username isn&rsquo;t capitlization sensitive (meaning <code>Bob</code> equals <code>bob</code>)</p>
+</li>
 </ul>
 <h4 id="an-iam-user-can-be-identified-in-3-ways">An IAM user can be identified in 3 ways:</h4>
 <ul>
-<li><strong>Name</strong> (the name you specified when creating the user)</li>
-<li><strong>Amazon Resource Name</strong> a.k.a. <strong>ARN</strong> (You use the ARN when you need to uniquely identify the user across all of AWS)</li>
-<li><strong>Unique identifier</strong> (This ID is returned only when you use the API, Tools for Windows PowerShell, or AWS CLI to create the user; you do not see this ID in the console)</li>
+<li>
+<p><strong>Name</strong> (the name you specified when creating the user)</p>
+</li>
+<li>
+<p><strong>Amazon Resource Name</strong> a.k.a. <strong>ARN</strong> (You use the ARN when you need to uniquely identify the user across all of AWS)</p>
+</li>
+<li>
+<p><strong>Unique identifier</strong> (This ID is returned only when you use the API, Tools for Windows PowerShell, or AWS CLI to create the user; you do not see this ID in the console)</p>
+</li>
 </ul>
 <h3 id="root-user">Root User</h3>
 <p>When you first create an AWS account, you start with a single identity that has full access to all AWS services and resources in the account. This is the AWS account&rsquo;s <em>root user</em> identity. An IAM user with administrator privileges is not the same as the root user of an AWS account.</p>
 <h4 id="root-user-main-concept">Root user main concept:</h4>
 <ul>
-<li>One account one root user</li>
-<li>A root user can create at most <strong>5000</strong> IAM users</li>
-<li>Account-wide access to all AWS services and resources</li>
-<li>Create or delete an AWS account</li>
-<li>Best practice is to <strong>never</strong> use root user, create an IAM user and use that instead</li>
+<li>
+<p>One account one root user</p>
+</li>
+<li>
+<p>A root user can create at most <strong>5000</strong> IAM users</p>
+</li>
+<li>
+<p>Account-wide access to all AWS services and resources</p>
+</li>
+<li>
+<p>Create or delete an AWS account</p>
+</li>
+<li>
+<p>Best practice is to <strong>never</strong> use root user, create an IAM user and use that instead</p>
+</li>
 </ul>
 <h3 id="credentials">Credentials</h3>
 <p>Different credentials are required depending on the user and how AWS resources are accessed.</p>
@@ -233,18 +257,30 @@ if (!doNotTrack) {
 <p><strong>Console password</strong></p>
 <p>A password that the user must enter in order to access interactive sessions such as the AWS Management Console.</p>
 <ul>
-<li>Root user credential: <code>email + password</code></li>
-<li>IAM user credential: <code>account ID + username + password</code></li>
+<li>
+<p>Root user credential: <code>email + password</code></p>
+</li>
+<li>
+<p>IAM user credential: <code>account ID + username + password</code></p>
+</li>
 </ul>
 </li>
 <li>
 <p><strong>Access keys</strong></p>
 <p>A combination of an <code>access key ID + secret key</code></p>
 <ul>
-<li>Access keys is needed to access AWS resources <em>programmatically</em> by using the AWS CLI, Tools for Windows PowerShell, the AWS SDKs or APIs.</li>
-<li>An access key is associated with an IAM user</li>
-<li>One IAM user can have at most 2 access keys</li>
-<li>the combination of <code>access key ID + secret key</code> is unique across AWS; therefore, it can be used to identify a specific user</li>
+<li>
+<p>Access keys is needed to access AWS resources <em>programmatically</em> by using the AWS CLI, Tools for Windows PowerShell, the AWS SDKs or APIs.</p>
+</li>
+<li>
+<p>An access key is associated with an IAM user</p>
+</li>
+<li>
+<p>One IAM user can have at most 2 access keys</p>
+</li>
+<li>
+<p>the combination of <code>access key ID + secret key</code> is unique across AWS; therefore, it can be used to identify a specific user</p>
+</li>
 </ul>
 </li>
 <li>
@@ -259,44 +295,57 @@ if (!doNotTrack) {
 <p>If you choose to use an IAM user&rsquo;s long-term credentials in your application, do not embed access keys directly into the application code. Use temporary security credentials (IAM roles) instead of long-term access keys as best practice.</p>
 <h3 id="iam-users-real-life-scenarios">IAM Users Real-Life Scenarios</h3>
 <ol>
-<li>Team Members
-<ul>
-<li>Every team member who needs to access AWS resources in a small organization or company will be given an IAM user account created by the company&rsquo;s root user account. Each IAM user account will have its own set of credentials: <code>username + password + accountID</code></li>
-</ul>
+<li>
+<p>Team Members</p>
+<p>Every team member who needs to access AWS resources in a small organization or company will be given an IAM user account created by the company&rsquo;s root user account. Each IAM user account will have its own set of credentials: <code>username + password + accountID</code></p>
 </li>
-<li>Federated Users
-<ul>
-<li>In a larger company with multiple teams and organizations, hundreds of thousands of employees may require access to AWS resources. Most businesses would have an AWS Directory Service that uses AD (Microsoft Active Directory) to grant employees access to AWS resources after they have been verified, also known as the &ldquo;single sign-on&rdquo; approach.</li>
-</ul>
+<li>
+<p>Federated Users</p>
+<p>In a larger company with multiple teams and organizations, hundreds of thousands of employees may require access to AWS resources. Most businesses would have an AWS Directory Service that uses AD (Microsoft Active Directory) to grant employees access to AWS resources after they have been verified, also known as the &ldquo;single sign-on&rdquo; approach.</p>
 </li>
-<li>Cross Account Users
-<ul>
-<li>When AWS users from other accounts attempt to access your AWS resources, this is referred to as a cross account user. Different accounts may originate from the same or different organizations. This can be solved with IAM roles, which we will discuss in the following chapter.</li>
-</ul>
+<li>
+<p>Cross Account Users</p>
+<p>When AWS users from other accounts attempt to access your AWS resources, this is referred to as a cross account user. Different accounts may originate from the same or different organizations. This can be solved with IAM roles, which we will discuss in the following chapter.</p>
 </li>
-<li>Programs and Applications
-<ul>
-<li>Often times applications will request access for your teams AWS resource through AWS APIs or AWS CLI. In this case, they need an <strong>access key</strong> (<code>access key ID + secret key</code>) to authenticate their requests. However, as a best practice, use temporary security credentials (IAM roles) instead of access keys.</li>
-</ul>
+<li>
+<p>Programs and Applications</p>
+<p>Often times applications will request access for your teams AWS resource through AWS APIs or AWS CLI. In this case, they need an <strong>access key</strong> (<code>access key ID + secret key</code>) to authenticate their requests. However, as a best practice, use temporary security credentials (IAM roles) instead of access keys.</p>
 </li>
 </ol>
 <h2 id="iam-user-group">IAM User Group</h2>
 <p>An IAM user group is literally what it means &ndash; a group of IAM users. User groups allow you to specify permissions for multiple users, making it easier to manage those users&rsquo; permissions. For example, you could create a user group called Admins and grant that group standard administrator privileges. Any user in that user group has Admins group permissions by default. If a new user joins your organization and requires administrator privileges, you can grant them by adding the user to the Admins user group. If a user changes jobs in your organization, you can remove him or her from the old user groups and add him or her to the appropriate new user groups instead of editing that user&rsquo;s permissions.</p>
 <h4 id="user-group-main-concepts">User Group Main Concepts</h4>
 <ul>
-<li>A user group can contain many users, and a user can belong to multiple user groups.</li>
-<li>User groups can&rsquo;t be nested; they can contain only users, not other user groups.</li>
-<li>There is no default user group that automatically includes all users in the AWS account. If you want to have a user group like that, you must create it and assign each new user to it.</li>
-<li>The number and size of IAM resources in an AWS account are limited, such as the number of groups and the number of groups that a user can be a member of. More information can be found at: <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html</a>.</li>
-<li>IAM group don&rsquo;t have credentials</li>
-<li>One root account can have at most <strong>300</strong> user groups</li>
-<li>Every IAM user can only join at most <strong>10</strong> groups.</li>
+<li>
+<p>A user group can contain many users, and a user can belong to multiple user groups.</p>
+</li>
+<li>
+<p>User groups can&rsquo;t be nested; they can contain only users, not other user groups.</p>
+</li>
+<li>
+<p>There is no default user group that automatically includes all users in the AWS account. If you want to have a user group like that, you must create it and assign each new user to it.</p>
+</li>
+<li>
+<p>The number and size of IAM resources in an AWS account are limited, such as the number of groups and the number of groups that a user can be a member of. More information can be found at: <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html</a>.</p>
+</li>
+<li>
+<p>IAM group don&rsquo;t have credentials</p>
+</li>
+<li>
+<p>One root account can have at most <strong>300</strong> user groups</p>
+</li>
+<li>
+<p>Every IAM user can only join at most <strong>10</strong> groups.</p>
+</li>
 </ul>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h2 id="resources">Resources</h2>
 <ul>
-<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html">Official AWS IAM Users Documentation</a></li>
-<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html">Official AWS IAM User Groups Documentation</a></li>
+<li>
+<p><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html">Official AWS IAM Users Documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html">Official AWS IAM User Groups Documentation</a></p>
+</li>
 </ul>
 
       </div>
