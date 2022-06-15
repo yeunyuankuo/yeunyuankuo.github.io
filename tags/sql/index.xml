@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL on &gt; jessie_kuo</title>
+    <link>https://yeunyuankuo.github.io/tags/sql/</link>
+    <description>Recent content in SQL on &gt; jessie_kuo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jun 2022 13:33:16 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Security Vunerability — SQL Injection</title>
+      <link>https://yeunyuankuo.github.io/posts/sql_injection/</link>
+      <pubDate>Mon, 13 Jun 2022 13:33:16 +0800</pubDate>
+      
+      <guid>https://yeunyuankuo.github.io/posts/sql_injection/</guid>
+      <description>What is SQL injection? SQL injection occurs when an attacker is able to inject SQL queries via the input data of an application. A successful attack allows an attacker to access and manipulate the backend database.
+What causes SQL injections? User input is used to dynamically build queries. If this input is not first validated, the query interpreter can be tricked to running arbitrary SQL queries or commands. For instance, the below code directly used strings from user input to construct it&amp;rsquo;s SQL query:</description>
+    </item>
+    
+    
+  </channel>
+</rss>
