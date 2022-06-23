@@ -6,14 +6,23 @@
     <description>Recent content in AWS on &gt; jessie_kuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jun 2022 09:31:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/categories/aws/index.xml" rel="self" type="application/rss+xml" /><item>
-      <title>AWS SNS: Mock `sns.publish` with Jest</title>
+    <lastBuildDate>Thu, 23 Jun 2022 09:31:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/categories/aws/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>AWS SNS: Mock sns.publish with Jest</title>
       <link>https://yeunyuankuo.github.io/posts/sns_jest/</link>
-      <pubDate>Thu, 16 Jun 2022 09:31:10 +0800</pubDate>
+      <pubDate>Thu, 23 Jun 2022 09:31:10 +0800</pubDate>
       
       <guid>https://yeunyuankuo.github.io/posts/sns_jest/</guid>
       <description>Outline There are a lot of jest mock examples out there, but never a clear example about Jest with AWS services (in this case, SNS). Today in this article I will show you how to mock sns.publish with Jest with all the code layed out and the logic explained.
 Understand what you&amp;rsquo;re testing How to write mock for SNS using Jest Closer look at sns.publish.mock 1. Understand what you&amp;rsquo;re testing Let&amp;rsquo;s take a look at the Node.</description>
+    </item>
+    
+    <item>
+      <title>Learn AWS IAM - IAM Users, Groups, Credentials</title>
+      <link>https://yeunyuankuo.github.io/posts/iam/</link>
+      <pubDate>Sun, 12 Jun 2022 20:00:15 +0800</pubDate>
+      
+      <guid>https://yeunyuankuo.github.io/posts/iam/</guid>
+      <description>What is AWS IAM? In AWS, Identity and Access Management (IAM) is one of the AWS services and it is used to help users securely control access to AWS resources. Everything you do in AWS needs permission, which means that you will eventually encounter or use IAM features when building your own AWS services. IAM features include determining who is eligible to sign in, who or what has access to resources, and so on.</description>
     </item>
     
     

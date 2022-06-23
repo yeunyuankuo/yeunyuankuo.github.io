@@ -6,10 +6,10 @@
     <description>Recent content in Testing on &gt; jessie_kuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jun 2022 09:31:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" /><item>
-      <title>AWS SNS: Mock `sns.publish` with Jest</title>
+    <lastBuildDate>Thu, 23 Jun 2022 09:31:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>AWS SNS: Mock sns.publish with Jest</title>
       <link>https://yeunyuankuo.github.io/posts/sns_jest/</link>
-      <pubDate>Thu, 16 Jun 2022 09:31:10 +0800</pubDate>
+      <pubDate>Thu, 23 Jun 2022 09:31:10 +0800</pubDate>
       
       <guid>https://yeunyuankuo.github.io/posts/sns_jest/</guid>
       <description>Outline There are a lot of jest mock examples out there, but never a clear example about Jest with AWS services (in this case, SNS). Today in this article I will show you how to mock sns.publish with Jest with all the code layed out and the logic explained.
