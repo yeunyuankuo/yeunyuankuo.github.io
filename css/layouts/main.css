@@ -262,9 +262,9 @@ pre {
   margin: 5px;
 }
 
-pre > code {
+/* pre > code {
   padding: 10px !important;
-}
+} */
 
 a.header-anchor {
   text-decoration: none;
@@ -282,9 +282,9 @@ a.header-anchor:hover i {
 }
 a.header-anchor code {
   /* color: #e83e8c; */
-  color: #ff6b00;
+  color: #0c7d0f;
   word-break: break-word;
-  background-color: #f3f3f3;
+  background-color: #e7e5e5;
   border-radius: 4px;
   padding: 2px 5px;
 }

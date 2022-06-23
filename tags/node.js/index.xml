@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>&gt; jessie_kuo</title>
-    <link>https://yeunyuankuo.github.io/</link>
-    <description>Recent content on &gt; jessie_kuo</description>
+    <title>Node.js on &gt; jessie_kuo</title>
+    <link>https://yeunyuankuo.github.io/tags/node.js/</link>
+    <description>Recent content in Node.js on &gt; jessie_kuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jun 2022 09:31:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Thu, 16 Jun 2022 09:31:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/tags/node.js/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>AWS SNS: Mock `sns.publish` with Jest</title>
       <link>https://yeunyuankuo.github.io/posts/sns_jest/</link>
       <pubDate>Thu, 16 Jun 2022 09:31:10 +0800</pubDate>
@@ -14,15 +14,6 @@
       <guid>https://yeunyuankuo.github.io/posts/sns_jest/</guid>
       <description>Outline There are a lot of jest mock examples out there, but never a clear example about Jest with AWS services (in this case, SNS). Today in this article I will show you how to mock sns.publish with Jest with all the code layed out and the logic explained.
 Understand what you&amp;rsquo;re testing How to write mock for SNS using Jest Closer look at sns.publish.mock 1. Understand what you&amp;rsquo;re testing Let&amp;rsquo;s take a look at the Node.</description>
-    </item>
-    
-    <item>
-      <title>Archives</title>
-      <link>https://yeunyuankuo.github.io/archives/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yeunyuankuo.github.io/archives/</guid>
-      <description>archives</description>
     </item>
     
     
