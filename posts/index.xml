@@ -25,6 +25,15 @@ Understand what you&amp;rsquo;re testing How to write mock for SNS using Jest Cl
       <description>What is AWS IAM? In AWS, Identity and Access Management (IAM) is one of the AWS services and it is used to help users securely control access to AWS resources. Everything you do in AWS needs permission, which means that you will eventually encounter or use IAM features when building your own AWS services. IAM features include determining who is eligible to sign in, who or what has access to resources, and so on.</description>
     </item>
     
+    <item>
+      <title>Step-by-Step Guide: How to create a new branch for Git repository</title>
+      <link>https://yeunyuankuo.github.io/posts/create_git_branch/</link>
+      <pubDate>Sun, 29 May 2022 19:06:49 +0800</pubDate>
+      
+      <guid>https://yeunyuankuo.github.io/posts/create_git_branch/</guid>
+      <description>We can push our new branch to the repository with the git push command. But here we also want to set the upstream branch. Every time a new branch is created, we need to set up an upstream branch so the new branch knows which remote repository to use every time it synchronizes its commit history. This step can be achieved with the &amp;ndash;set-upstream command.</description>
+    </item>
+    
     
   </channel>
 </rss>
