@@ -145,7 +145,7 @@
     width: 100%;
   }
   .post-card-holder .post-card {
-    width: calc(100% / 4);
+    width: calc(100% / 3);
   }
 }
 

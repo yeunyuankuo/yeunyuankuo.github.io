@@ -189,7 +189,7 @@ if (!doNotTrack) {
         
         <p><img src="../../images/sns_jest_banner.png" alt="SNS_jest"></p>
 <h2 id="outline">Outline</h2>
-<p>There are a lot of jest mock examples out there, but never a clear example about Jest with AWS services (in this case, SNS). Today in this article I will show you how to mock <code>sns.publish</code> with Jest with all the code layed out and the logic explained.</p>
+<p>There are a lot of jest mock examples out there, but never a clear example about Jest with AWS services (in this case, SNS). Today, in this article I will show you how to mock <code>sns.publish</code> with Jest and with all the code layed out and the logic explained.</p>
 <blockquote>
 <ol>
 <li><a href="#1-understand-what-youre-testing">Understand what you&rsquo;re testing</a></li>
@@ -296,7 +296,7 @@ if (!doNotTrack) {
 <p><code>test()</code>: the specific test case that we want the <code>describe()</code> function to run. Inside <code>test('should send message to SNS)</code> , it will require <code>sendMessage.js</code> and call the <code>handler()</code> that was previously defined.</p>
 <ul>
 <li>
-<p><code>expect(mockSNS.publish).toHaveBeenCalledTimes(1)</code>: This checks if our mocked sns.publish was called once. If called once, then retirn true. In our case, it should be true, since <code>handler(triggerInput(&quot;send&quot;))</code> does recerice an event with <code>event.status</code> equals to <em>&ldquo;send&rdquo;</em>, and so our lambda function should sns.publish the message we want.</p>
+<p><code>expect(mockSNS.publish).toHaveBeenCalledTimes(1)</code>: This checks if our mocked sns.publish was called once. If called once, then retirn true. In our case, it should be true, since <code>handler(triggerInput(&quot;send&quot;))</code> does receice an event with <code>event.status</code> equals to <em>&ldquo;send&rdquo;</em>, and so our lambda function should sns.publish the message we want.</p>
 </li>
 <li>
 <p><code>expect(mockSNS.publish).toHaveBeenCalledWith(expectedPublishContent)</code>: this checks if the correct message was called. This basically checks if the correct message was send through <code>sns.publish</code>. In this case, the correct message is defined inside <code>expectedPublishContent</code>. This expect function will check if the message we send to mock sns is the same as what&rsquo;s inside <code>expectedPublishContent</code>. If the same, then return true.</p>
