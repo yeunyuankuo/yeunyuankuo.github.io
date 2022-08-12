@@ -1,5 +1,4 @@
 body {
-  background-color: white;
   position: relative;
 }
 /* .read-area {
@@ -13,6 +12,15 @@ body {
   width: 100%;
   justify-content: space-between;
   position: relative;
+  background-color: white !important; 
+}
+
+#footer-block {
+ background-color: white;
+}
+
+#footer-block p {
+  padding-top: 0px !important;
 }
 
 .content-section {
