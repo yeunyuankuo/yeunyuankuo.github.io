@@ -3,7 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yeunyuankuo.github.io/</loc>
-    <lastmod>2022-06-23T10:31:10+08:00</lastmod>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/categories/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/tags/go/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/categories/go/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/tags/golang/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/tags/goroutine/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/tags/interview/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/categories/interview/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/posts/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/tags/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
+  </url><url>
+    <loc>https://yeunyuankuo.github.io/posts/goroutine_lightweight/</loc>
+    <lastmod>2022-08-12T18:59:10+08:00</lastmod>
   </url><url>
     <loc>https://yeunyuankuo.github.io/tags/aws/</loc>
     <lastmod>2022-06-23T10:31:10+08:00</lastmod>
@@ -20,9 +50,6 @@
     <loc>https://yeunyuankuo.github.io/posts/sns_jest/</loc>
     <lastmod>2022-06-23T10:31:10+08:00</lastmod>
   </url><url>
-    <loc>https://yeunyuankuo.github.io/categories/</loc>
-    <lastmod>2022-06-23T10:31:10+08:00</lastmod>
-  </url><url>
     <loc>https://yeunyuankuo.github.io/tags/jest/</loc>
     <lastmod>2022-06-23T10:31:10+08:00</lastmod>
   </url><url>
@@ -33,12 +60,6 @@
     <lastmod>2022-06-23T10:31:10+08:00</lastmod>
   </url><url>
     <loc>https://yeunyuankuo.github.io/categories/node.js/</loc>
-    <lastmod>2022-06-23T10:31:10+08:00</lastmod>
-  </url><url>
-    <loc>https://yeunyuankuo.github.io/posts/</loc>
-    <lastmod>2022-06-23T10:31:10+08:00</lastmod>
-  </url><url>
-    <loc>https://yeunyuankuo.github.io/tags/</loc>
     <lastmod>2022-06-23T10:31:10+08:00</lastmod>
   </url><url>
     <loc>https://yeunyuankuo.github.io/tags/testing/</loc>
