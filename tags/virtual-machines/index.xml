@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Virtualization Technologies on &gt; jessie_kuo</title>
-    <link>https://yeunyuankuo.github.io/categories/virtualization-technologies/</link>
-    <description>Recent content in Virtualization Technologies on &gt; jessie_kuo</description>
+    <title>Virtual Machines on &gt; jessie_kuo</title>
+    <link>https://yeunyuankuo.github.io/tags/virtual-machines/</link>
+    <description>Recent content in Virtual Machines on &gt; jessie_kuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Aug 2022 17:59:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/categories/virtualization-technologies/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Fri, 12 Aug 2022 17:59:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/tags/virtual-machines/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Why is Containerization Taking Over?</title>
       <link>https://yeunyuankuo.github.io/posts/container/</link>
       <pubDate>Fri, 12 Aug 2022 17:59:10 +0800</pubDate>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Why is Containerization Taking Over?</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+
+<meta property="og:title" content="Why is Containerization Taking Over?" />
+<meta property="og:description" content="An important sign of Kubernetes momentum is the continuing shift to production, growing from 59% in the 2020 report to 65% this year. Companies with more than 500 developers were more likely to be running all or most containerized workloads in production (78%). In our first State of Kubernetes report in 2018, less than a third (30%) reported running Kubernetes in production." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yeunyuankuo.github.io/posts/container/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-12T17:59:10+08:00" />
+<meta property="article:modified_time" content="2022-08-12T17:59:10+08:00" />
+
+
+
+    
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <meta name="description" content="An important sign of Kubernetes momentum is the continuing shift to production, growing from 59% in the 2020 report to 65% this year. Companies with more than 500 developers were more likely to be running all or most containerized workloads in production (78%). In our first State of Kubernetes report in 2018, less than a third (30%) reported running Kubernetes in production." />
+  <link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/styles/github-dark.min.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="/css/layouts/single.css"/>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9525861214839192" crossorigin="anonymous"></script>
+
+
+    
+
+    
+        
+        
+            
+            
+            
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9W4REFWQS"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-L9W4REFWQS', { 'anonymize_ip': false });
+}
+</script>
+
+        
+
+        
+        
+
+        
+        
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80" id="top">
+    <div class="container-fluid bg-white wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <nav class="navbar navbar-expand-xl top-navbar final-navbar">
+  <div class="container">
+      
+    <a class="navbar-brand" href="/posts">
+      &gt; jessie_kuo</a>
+    
+
+    
+    <div id="top-nav-items">
+      <ul class="navbar-nav ml-auto" id="posts-menu">
+      
+      <li class="nav-item">
+        <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="archives-link" href="/archives">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="categories-link" href="/categories">Categories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tags-link" href="/tags">Tags</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="about-link" href="/">About</a>
+      </li>
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+
+
+      
+  
+  <div class="page-content">
+    
+    
+
+    <div class="post">
+      <h1 class="post-title">Why is Containerization Taking Over?</h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2022-08-12
+          </span>
+
+          
+            
+          
+        
+
+        
+          <span class="post-author"
+            >— Written by Jessie Kuo</span
+          >
+
+
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            <a href="https://yeunyuankuo.github.io/tags/container/">#Container</a>&nbsp;
+          
+            <a href="https://yeunyuankuo.github.io/tags/virtual-machines/">#Virtual Machines</a>&nbsp;
+          
+            <a href="https://yeunyuankuo.github.io/tags/virtualization-technologies/">#Virtualization Technologies</a>&nbsp;
+          
+            <a href="https://yeunyuankuo.github.io/tags/kubernetes/">#Kubernetes</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content" style="padding-top:50px; padding-bottom:100px">
+        
+        <p><img src="../../images/cargoship.jpeg#center" alt="cargoship"></p>
+<blockquote>
+<p>“An important sign of Kubernetes momentum is the continuing shift to production, growing from 59% in the 2020 report to 65% this year. Companies with more than 500 developers were more likely to be running all or most containerized workloads in production (78%). In our first State of Kubernetes report in 2018, less than a third (30%) reported running Kubernetes in production.”</p>
+<p>— State of Kubernetes 2021 Report by VMware</p>
+</blockquote>
+<p>In VMware’s State of Kubernetes 2021 Report, it pointed out that there has been a distinct shift to Kubernetes in Production. More companies are choosing to run containerized workloads over other virtualization technologies like bare-metal servers and virtual machines.</p>
+<p>To understand why companies favor containers over other virtualization technologies. We need to take a closer look at the 3 most common virtualization technologies on the market: <strong>Bare-metal Servers</strong>, <strong>Virtual Machines</strong>, and <strong>Containers</strong>.</p>
+<h2 id="heading"></h2>
+<h2 id="bare-metal-servers">Bare-metal Servers</h2>
+<p><img src="../../images/bare-metal.jpeg#center" alt="bare-metal"></p>
+<p>With bare-metal servers, the operating system is installed directly on the server, eliminating layers and delivering better performance. For instance, you simply install an operating system on your server hardware, then any shared libraries on top of that, and finally your application that uses those libraries, and you’d be good to go. This is how things have been for a long time.</p>
+<p>The issue with this architecture is that is massively inefficient. <strong>Your hardware cost is the same whether you are running a 0% utilization or 100% utilization</strong>. All your applications are fighting for the same resources and you have to keep the versions of your library in sync with all the applications. If one program requires an updated version of the library that is incompatible with other applications operating on the same host, then you run into problems!</p>
+<h2 id="heading-1"></h2>
+<h2 id="virtual-machines">Virtual Machines</h2>
+<p><img src="../../images/vm.jpeg#center" alt="vm"></p>
+<p>Virtual machine solves the problem of bare-metal server by putting a virtualization platform over the operating system. Now you’ve isolated applications and their libraries with their own full operating system into a virtual machine. This enhances usage since you can run additional virtual machines on top of the existing hardware, lowering your physical footprint significantly.</p>
+<p>The disadvantage of virtual machines is that the <strong>virtualization layer is cumbersome</strong>. In the image above, you now have 4 operating systems instead of one. That means more patching, more updates, and significantly more space being taken up by the physical host. There’s also significant redundancy. You’ve installed potentially the same operating system 4 times and potentially the same library 3 times. We can do better!</p>
+<h2 id="heading-2"></h2>
+<h2 id="containers">Containers</h2>
+<p><img src="../../images/container.jpeg#center" alt="container"></p>
+<p>By packaging code and dependencies together, containers are an abstraction for the application layer. The container runtime shares the operating system’s kernel, enabling you to create container images using file system layers. The <strong>containers are lightweight efficient and fast</strong>! Containers consume less space compared to virtual machines (container images usually take up around tens of MB in size). They can be spawned up and spawned down faster than virtual machines.</p>
+<p>Containers allow for better utilization of the underlying hardware. You can share libraries when necessary, but you can also isolate libraries for your applications. Containers are also highly portable. Because containers isolate software from the other layers, their codes run identically across different environments, whether it’s from compliance, staging, or all the way to production.</p>
+<h2 id="heading-3"></h2>
+<h2 id="summary">Summary</h2>
+<p>After understanding the differences between bare-metal servers, virtual machines, and containers, we can safely say that containers provide benefits that other virtualization technologies do not possess, such as <strong>faster software development cycles, increased resource utilization, and easier application upgrades</strong>.</p>
+<p>Whether your organization is one of the 65% that is already using containerized workload in production or not, the momentum behind container technology is evident!</p>
+<h2 id="heading-4"></h2>
+<h2 id="resources">Resources</h2>
+<ol>
+<li><a href="https://tanzu.s3.us-east-2.amazonaws.com/campaigns/pdfs/VMware_StateOfKubernetes2021_eBook_060821.pdf">State of Kubernetes 2021 Report — VMware</a></li>
+<li><a href="https://www.rackspace.com/library/what-is-a-bare-metal-server">What is a Bare Metal Server?</a></li>
+<li><a href="https://www.docker.com/resources/what-container/">Docker Official Website</a></li>
+</ol>
+
+      </div>
+
+      <hr/>
+
+      
+      <div class="share-buttons" style="padding: 50px 0px;">
+        <strong>Share on:</strong>
+        <a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f&text=Why%20is%20Containerization%20Taking%20Over%3f&via=%3e%20jessie_kuo" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a  class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f&title=Why%20is%20Containerization%20Taking%20Over%3f" target="_blank">
+          <i class="fab fa-reddit"></i>
+        </a>
+        <a class="btn btn-sm tumblr-btn" href="https://www.tumblr.com/share/link?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f&name=Why%20is%20Containerization%20Taking%20Over%3f&description=An%20important%20sign%20of%20Kubernetes%20momentum%20is%20the%20continuing%20shift%20to%20production%2c%20growing%20from%2059%25%20in%20the%202020%20report%20to%2065%25%20this%20year.%20Companies%20with%20more%20than%20500%20developers%20were%20more%20likely%20to%20be%20running%20all%20or%20most%20containerized%20workloads%20in%20production%20%2878%25%29.%20In%20our%20first%20State%20of%20Kubernetes%20report%20in%202018%2c%20less%20than%20a%20third%20%2830%25%29%20reported%20running%20Kubernetes%20in%20production." target="_blank">
+          <i class="fab fa-tumblr"></i>
+        </a>
+        <a class="btn btn-sm pocket-btn" href="https://getpocket.com/save?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f&title=Why%20is%20Containerization%20Taking%20Over%3f" target="_blank">
+          <i class="fab fa-get-pocket"></i>
+        </a>
+        <a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f&title=Why%20is%20Containerization%20Taking%20Over%3f" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="btn btn-sm diaspora-btn" href="https://share.diasporafoundation.org/?title=Why%20is%20Containerization%20Taking%20Over%3f&url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f" rel="nofollow" target="_blank">
+          <i class="fab fa-diaspora"></i>
+        </a>
+        <a class="btn btn-sm mastodon-btn" href="https://mastodon.social/share?text=Why%20is%20Containerization%20Taking%20Over%3f - https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f" target="_blank">
+          <i class="fab fa-mastodon"></i>
+        </a>
+        <a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Why%20is%20Containerization%20Taking%20Over%3f https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a class="btn btn-sm email-btn" href="mailto:?subject=Why%20is%20Containerization%20Taking%20Over%3f&body=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2fcontainer%2f" target="_blank">
+          <i class="fas fa-envelope-open-text"></i>
+        </a>
+      </div>
+
+      
+
+      
+      
+        
+    
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function () {
+      
+      
+      
+
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      var disqus_shortname = "yeunyuankuo";
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+  <a href="https://disqus.com/" class="dsq-brlink"
+    >comments powered by <span class="logo-disqus">Disqus</span></a
+  >
+
+
+
+
+      
+
+      
+      
+    </div>
+
+  
+  
+
+  </div>
+
+  
+  <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+  </a>
+  
+ 
+
+      
+
+      
+       
+
+      
+      
+
+      
+      
+
+    </div>
+
+    
+    
+    <div>
+      <p style="text-align: center; padding-bottom: 50px; padding-top: 100px; color: gray;">Copyright © 2022 Jessie Kuo. All Rights Reserved.</p>
+    </div>
+
+    
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+          mybutton.style.visibility = "visible";
+          mybutton.style.opacity = "1";
+      } else {
+          mybutton.style.visibility = "hidden";
+          mybutton.style.opacity = "0";
+      }
+  };
+
+</script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
