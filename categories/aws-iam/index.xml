@@ -8,10 +8,10 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Aug 2022 20:00:15 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/categories/aws-iam/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Learn AWS IAM - IAM Users, Groups, Credentials</title>
-      <link>https://yeunyuankuo.github.io/posts/iam/</link>
+      <link>https://yeunyuankuo.github.io/posts/aws_iam/</link>
       <pubDate>Mon, 01 Aug 2022 20:00:15 +0800</pubDate>
       
-      <guid>https://yeunyuankuo.github.io/posts/iam/</guid>
+      <guid>https://yeunyuankuo.github.io/posts/aws_iam/</guid>
       <description>What is AWS IAM? In AWS, Identity and Access Management (IAM) is one of the AWS services and it is used to help users securely control access to AWS resources. Everything you do in AWS needs permission, which means that you will eventually encounter or use IAM features when building your own AWS services. IAM features include determining who is eligible to sign in, who or what has access to resources, and so on.</description>
     </item>
     

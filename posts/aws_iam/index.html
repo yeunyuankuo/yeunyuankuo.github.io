@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learn AWS IAM - IAM Users, Groups, Credentials</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+
+<meta property="og:title" content="Learn AWS IAM - IAM Users, Groups, Credentials" />
+<meta property="og:description" content="In AWS, Identity and Access Management (IAM) is one of the AWS services and it is used to help users securely control access to AWS resources. Everything you do in AWS needs permission, which means that you will eventually encounter or use IAM features when building your own AWS services. IAM features include determining who is eligible to sign in, who or what has access to resources, and so on." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yeunyuankuo.github.io/posts/aws_iam/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-01T20:00:15+08:00" />
+<meta property="article:modified_time" content="2022-08-01T20:00:15+08:00" />
+
+
+
+    
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <meta name="description" content="In AWS, Identity and Access Management (IAM) is one of the AWS services and it is used to help users securely control access to AWS resources. Everything you do in AWS needs permission, which means that you will eventually encounter or use IAM features when building your own AWS services. IAM features include determining who is eligible to sign in, who or what has access to resources, and so on." />
+  <link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/styles/github-dark.min.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="/css/layouts/single.css"/>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9525861214839192" crossorigin="anonymous"></script>
+
+
+    
+
+    
+        
+        
+            
+            
+            
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9W4REFWQS"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-L9W4REFWQS', { 'anonymize_ip': false });
+}
+</script>
+
+        
+
+        
+        
+
+        
+        
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80" id="top">
+    <div class="container-fluid bg-white wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <nav class="navbar navbar-expand-xl top-navbar final-navbar">
+  <div class="container">
+      
+    <a class="navbar-brand" href="/posts">
+      &gt; jessie_kuo</a>
+    
+
+    
+    <div id="top-nav-items">
+      <ul class="navbar-nav ml-auto" id="posts-menu">
+      
+      <li class="nav-item">
+        <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="archives-link" href="/archives">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="categories-link" href="/categories">Categories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tags-link" href="/tags">Tags</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="about-link" href="/">About</a>
+      </li>
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+
+
+      
+  
+  <div class="page-content">
+    
+    
+
+    <div class="post">
+      <h1 class="post-title">Learn AWS IAM - IAM Users, Groups, Credentials</h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2022-08-01
+          </span>
+
+          
+            
+          
+        
+
+        
+          <span class="post-author"
+            >— Written by Jessie Kuo</span
+          >
+
+
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            <a href="https://yeunyuankuo.github.io/tags/aws/">#AWS</a>&nbsp;
+          
+            <a href="https://yeunyuankuo.github.io/tags/cloud/">#Cloud</a>&nbsp;
+          
+            <a href="https://yeunyuankuo.github.io/tags/aws-iam/">#AWS IAM</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content" style="padding-top:50px; padding-bottom:100px">
+        
+        <p><img src="../../images/iam_banner.png" alt="IAM"></p>
+<h2 id="what-is-aws-iam">What is AWS IAM?</h2>
+<p>In AWS, <strong>Identity and Access Management (IAM)</strong> is one of the AWS services and it is used to help users securely control access to AWS resources. Everything you do in AWS needs permission, which means that you will eventually encounter or use IAM features when building your own AWS services. IAM features include determining who is eligible to sign in, who or what has access to resources, and so on.</p>
+<h4 id="iam-terminologies-cheatsheet">IAM Terminologies Cheatsheet:</h4>
+<ul>
+<li>
+<p><strong>IAM Resource</strong>: IAM Resources includes IAM user, IAM user group, IAM role, IAM policy, and identity provider objects.</p>
+</li>
+<li>
+<p><strong>IAM Identity</strong>: The resource objects in IAM that are used to identify and group resources.</p>
+</li>
+<li>
+<p><strong>IAM Entity</strong>: IAM users and IAM roles are two examples. Use AWS&rsquo;s IAM resource objects for authentication.</p>
+</li>
+<li>
+<p><strong>Principal</strong>: A person or application with the authority to request an AWS action or operation. The principal must be authenticated as the AWS account root user or an IAM entity in order to make requests to AWS. This includes federated users and assumed roles.</p>
+</li>
+</ul>
+<h2 id="iam-user">IAM User</h2>
+<p>An IAM user is an AWS entity that you create to represent a person or application that interacts with AWS. AWS users are made up of a name and credentials.</p>
+<h4 id="iam-user-cheatsheet">IAM User Cheatsheet:</h4>
+<ul>
+<li>
+<p>Brand new IAM users by default has no permissions</p>
+</li>
+<li>
+<p>permission boundary can be add to a user</p>
+</li>
+<li>
+<p>Each IAM user is associated with one and only one root user</p>
+</li>
+<li>
+<p>When creating a IAM user, IAM username isn&rsquo;t capitlization sensitive (meaning <code>Bob</code> equals <code>bob</code>)</p>
+</li>
+</ul>
+<h4 id="3-ways-to-identify-an-iam-user">3 ways to identify an IAM user:</h4>
+<ul>
+<li>
+<p><strong>Name</strong>: the name you gave when you created the user.</p>
+</li>
+<li>
+<p><strong>Amazon Resource Name (ARN)</strong>: When you need to uniquely identify a user across all of AWS, you use the ARN.</p>
+</li>
+<li>
+<p><strong>Unique identifier</strong>: This ID is only returned when the user is created through the API, Tools for Windows PowerShell, or AWS CLI; it is not displayed in the console.</p>
+</li>
+</ul>
+<h3 id="root-user">Root User</h3>
+<p>When an AWS account is newly created, you start with a single identity that has full access to all AWS services and resources in the account. This is the AWS account&rsquo;s <em>root user</em> identity. An IAM user with administrator privileges is not the same as the root user of an AWS account.</p>
+<h4 id="root-user-cheatsheet">Root user Cheatsheet:</h4>
+<ul>
+<li>
+<p>One account one root user</p>
+</li>
+<li>
+<p>A root user can create at most <strong>5000</strong> IAM users</p>
+</li>
+<li>
+<p>Account-wide access to all AWS services and resources</p>
+</li>
+<li>
+<p>Create or delete an AWS account</p>
+</li>
+<li>
+<p>Best practice is to <strong>never</strong> use root user, create an IAM user and use that instead</p>
+</li>
+</ul>
+<h3 id="credentials">Credentials</h3>
+<p>Different credentials are required depending on the user and how AWS resources are accessed.</p>
+<ul>
+<li>
+<p><strong>Console password</strong></p>
+<p>A password that must be entered by the user in order to access interactive sessions like the AWS Management Console.</p>
+<ul>
+<li>
+<p>Root user credential: <code>email + password</code>.</p>
+</li>
+<li>
+<p>IAM user credential: <code>account ID + username + password</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Access keys</strong></p>
+<p>Access key is a combination of <code>access key ID + secret key</code>.</p>
+<ul>
+<li>
+<p>To access AWS resources programmatically via the AWS CLI, Tools for Windows PowerShell, AWS SDKs, or APIs, access keys are required.</p>
+</li>
+<li>
+<p>An access key is associated with an IAM user.</p>
+</li>
+<li>
+<p>One IAM user can have at most 2 access keys.</p>
+</li>
+<li>
+<p>Access keys are unique across AWS; thus, it can be used to identify a specific user.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>SSH keys for CodeCommit</strong></p>
+<p>A SSH public key that can be used to authenticate with CodeCommit (OpenSSH formatted).</p>
+</li>
+<li>
+<p><strong>Server certificates</strong></p>
+<p>Certain AWS services can be authenticated using SSL/TLS certificates. AWS Certificate Manager is used to provision, manage, and deploy server certificates (ACM).</p>
+</li>
+</ul>
+<p>If you use an IAM user&rsquo;s long-term credentials in your application, avoid embedding access keys directly into the application code. As a best practice, use temporary security credentials (IAM roles) instead of long-term access keys.</p>
+<h3 id="iam-users-real-life-scenarios">IAM Users Real-Life Scenarios</h3>
+<ol>
+<li>
+<p>Team Members</p>
+<p>Every team member who needs to access AWS resources in a small organization or company will be given an IAM user account created by the company&rsquo;s root user account. Each IAM user account will have its own set of credentials: <code>username + password + accountID</code>.</p>
+</li>
+<li>
+<p>Federated Users</p>
+<p>In a larger company with multiple teams and organizations, hundreds of thousands of employees may require access to AWS resources. The &ldquo;single sign-on&rdquo; strategy, which leverages AD (Microsoft Active Directory) to provide employees access to AWS services after they have been confirmed, is used by the majority of enterprises.</p>
+</li>
+<li>
+<p>Cross Account Users</p>
+<p>When AWS users from other accounts attempt to access your AWS resources, this is referred to as a cross account user. Accounts may come from the same or different organizations. This can be solved with IAM roles, which we will discuss in the following chapter.</p>
+</li>
+<li>
+<p>Programs and Applications</p>
+<p>Often times applications will request access for your teams AWS resource through AWS APIs or AWS CLI. In this case, they need an <strong>access key</strong> (<code>access key ID + secret key</code>) to authenticate their requests. Use temporary security credentials (IAM roles) instead of access keys as a best practice.</p>
+</li>
+</ol>
+<h2 id="iam-user-group">IAM User Group</h2>
+<p>An IAM user group is literally what it means &ndash; a group of IAM users. User groups allow you to specify permissions for multiple users, making it easier to manage those users&rsquo; permissions. For example, you could create a user group called Admins and grant that group standard administrator privileges. Any user in that user group has Admins group permissions by default. You can provide administrator capabilities to a new user who joins your company by adding them to the Admins user group. If a user in your company changes jobs, instead of altering that user&rsquo;s permissions, you can remove him or her from the old user groups and add him or her to the necessary new user groups.</p>
+<h4 id="user-group-cheatsheet">User Group Cheatsheet:</h4>
+<ul>
+<li>
+<p>User groups can&rsquo;t be nested; they can contain only users, not other user groups.</p>
+</li>
+<li>
+<p>A user group can have many members, and a user can belong to multiple user groups.</p>
+</li>
+<li>
+<p>There is no default user group that includes all AWS account users by default. If you want to have a user group like that, you must create it and assign each new user to it.</p>
+</li>
+<li>
+<p>The number and size of IAM resources in an AWS account are limited, such as the number of groups and the number of groups that a user can be a member of. More information can be found at: <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html</a>.</p>
+</li>
+<li>
+<p>IAM group don&rsquo;t have credentials.</p>
+</li>
+<li>
+<p>A single root account can only have <strong>300</strong> user groups.</p>
+</li>
+<li>
+<p>There are a maximum of <strong>300</strong> user groups per root account.</p>
+</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>
+<p><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html">Official AWS IAM Users Documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html">Official AWS IAM User Groups Documentation</a></p>
+</li>
+</ul>
+
+      </div>
+
+      <hr/>
+
+      
+      <div class="share-buttons" style="padding: 50px 0px;">
+        <strong>Share on:</strong>
+        <a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f&text=Learn%20AWS%20IAM%20-%20IAM%20Users%2c%20Groups%2c%20Credentials&via=%3e%20jessie_kuo" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a  class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f&title=Learn%20AWS%20IAM%20-%20IAM%20Users%2c%20Groups%2c%20Credentials" target="_blank">
+          <i class="fab fa-reddit"></i>
+        </a>
+        <a class="btn btn-sm tumblr-btn" href="https://www.tumblr.com/share/link?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f&name=Learn%20AWS%20IAM%20-%20IAM%20Users%2c%20Groups%2c%20Credentials&description=In%20AWS%2c%20Identity%20and%20Access%20Management%20%28IAM%29%20is%20one%20of%20the%20AWS%20services%20and%20it%20is%20used%20to%20help%20users%20securely%20control%20access%20to%20AWS%20resources.%20Everything%20you%20do%20in%20AWS%20needs%20permission%2c%20which%20means%20that%20you%20will%20eventually%20encounter%20or%20use%20IAM%20features%20when%20building%20your%20own%20AWS%20services.%20IAM%20features%20include%20determining%20who%20is%20eligible%20to%20sign%20in%2c%20who%20or%20what%20has%20access%20to%20resources%2c%20and%20so%20on." target="_blank">
+          <i class="fab fa-tumblr"></i>
+        </a>
+        <a class="btn btn-sm pocket-btn" href="https://getpocket.com/save?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f&title=Learn%20AWS%20IAM%20-%20IAM%20Users%2c%20Groups%2c%20Credentials" target="_blank">
+          <i class="fab fa-get-pocket"></i>
+        </a>
+        <a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f&title=Learn%20AWS%20IAM%20-%20IAM%20Users%2c%20Groups%2c%20Credentials" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="btn btn-sm diaspora-btn" href="https://share.diasporafoundation.org/?title=Learn%20AWS%20IAM%20-%20IAM%20Users%2c%20Groups%2c%20Credentials&url=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f" rel="nofollow" target="_blank">
+          <i class="fab fa-diaspora"></i>
+        </a>
+        <a class="btn btn-sm mastodon-btn" href="https://mastodon.social/share?text=Learn%20AWS%20IAM%20-%20IAM%20Users%2c%20Groups%2c%20Credentials - https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f" target="_blank">
+          <i class="fab fa-mastodon"></i>
+        </a>
+        <a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Learn%20AWS%20IAM%20-%20IAM%20Users%2c%20Groups%2c%20Credentials https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a class="btn btn-sm email-btn" href="mailto:?subject=Learn%20AWS%20IAM%20-%20IAM%20Users%2c%20Groups%2c%20Credentials&body=https%3a%2f%2fyeunyuankuo.github.io%2fposts%2faws_iam%2f" target="_blank">
+          <i class="fas fa-envelope-open-text"></i>
+        </a>
+      </div>
+
+      
+
+      
+      
+        
+    
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function () {
+      
+      
+      
+
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      var disqus_shortname = "yeunyuankuo";
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+  <a href="https://disqus.com/" class="dsq-brlink"
+    >comments powered by <span class="logo-disqus">Disqus</span></a
+  >
+
+
+
+
+      
+
+      
+      
+    </div>
+
+  
+  
+
+  </div>
+
+  
+  <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+  </a>
+  
+ 
+
+      
+
+      
+       
+
+      
+      
+
+      
+      
+
+    </div>
+
+    
+    
+    <div>
+      <p style="text-align: center; padding-bottom: 50px; padding-top: 100px; color: gray;">Copyright © 2022 Jessie Kuo. All Rights Reserved.</p>
+    </div>
+
+    
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+          mybutton.style.visibility = "visible";
+          mybutton.style.opacity = "1";
+      } else {
+          mybutton.style.visibility = "hidden";
+          mybutton.style.opacity = "0";
+      }
+  };
+
+</script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

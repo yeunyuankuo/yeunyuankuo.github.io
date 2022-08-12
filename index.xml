@@ -8,47 +8,47 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Aug 2022 18:59:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Why is goroutine being called a “lightweight” thread?</title>
-      <link>https://yeunyuankuo.github.io/posts/goroutine_lightweight/</link>
+      <link>https://yeunyuankuo.github.io/posts/go_goroutine_lightweight/</link>
       <pubDate>Fri, 12 Aug 2022 18:59:10 +0800</pubDate>
       
-      <guid>https://yeunyuankuo.github.io/posts/goroutine_lightweight/</guid>
+      <guid>https://yeunyuankuo.github.io/posts/go_goroutine_lightweight/</guid>
       <description>I was asked this question in one of my recent software engineer job interviews, and I believe I didn’t answer it as well as I would have liked, so I wanted to write this blog to re-answer it and perhaps aid someone else who is also curious about the solution.</description>
     </item>
     
     <item>
       <title>Why is Containerization Taking Over?</title>
-      <link>https://yeunyuankuo.github.io/posts/container/</link>
+      <link>https://yeunyuankuo.github.io/posts/containerization_taking_over/</link>
       <pubDate>Fri, 12 Aug 2022 17:59:10 +0800</pubDate>
       
-      <guid>https://yeunyuankuo.github.io/posts/container/</guid>
+      <guid>https://yeunyuankuo.github.io/posts/containerization_taking_over/</guid>
       <description>An important sign of Kubernetes momentum is the continuing shift to production, growing from 59% in the 2020 report to 65% this year. Companies with more than 500 developers were more likely to be running all or most containerized workloads in production (78%). In our first State of Kubernetes report in 2018, less than a third (30%) reported running Kubernetes in production.</description>
     </item>
     
     <item>
       <title>Learn AWS IAM - IAM Users, Groups, Credentials</title>
-      <link>https://yeunyuankuo.github.io/posts/iam/</link>
+      <link>https://yeunyuankuo.github.io/posts/aws_iam/</link>
       <pubDate>Mon, 01 Aug 2022 20:00:15 +0800</pubDate>
       
-      <guid>https://yeunyuankuo.github.io/posts/iam/</guid>
+      <guid>https://yeunyuankuo.github.io/posts/aws_iam/</guid>
       <description>What is AWS IAM? In AWS, Identity and Access Management (IAM) is one of the AWS services and it is used to help users securely control access to AWS resources. Everything you do in AWS needs permission, which means that you will eventually encounter or use IAM features when building your own AWS services. IAM features include determining who is eligible to sign in, who or what has access to resources, and so on.</description>
     </item>
     
     <item>
       <title>AWS SNS: Mock sns.publish with Jest</title>
-      <link>https://yeunyuankuo.github.io/posts/sns_jest/</link>
+      <link>https://yeunyuankuo.github.io/posts/aws_sns_jest/</link>
       <pubDate>Thu, 23 Jun 2022 10:31:10 +0800</pubDate>
       
-      <guid>https://yeunyuankuo.github.io/posts/sns_jest/</guid>
+      <guid>https://yeunyuankuo.github.io/posts/aws_sns_jest/</guid>
       <description>Outline There are a lot of jest mock examples out there, but never a clear example about Jest with AWS services (in this case, SNS). Today, in this article I will show you how to mock sns.publish with Jest and with all the code layed out and the logic explained.
 Understand what you&amp;rsquo;re testing How to write mock for SNS using Jest Closer look at sns.publish.mock 1. Understand what you&amp;rsquo;re testing Let&amp;rsquo;s take a look at the Node.</description>
     </item>
     
     <item>
       <title>Step-by-Step Guide: How to create a new branch for Git repository</title>
-      <link>https://yeunyuankuo.github.io/posts/create_git_branch/</link>
+      <link>https://yeunyuankuo.github.io/posts/git_create_branch/</link>
       <pubDate>Sun, 29 May 2022 19:06:49 +0800</pubDate>
       
-      <guid>https://yeunyuankuo.github.io/posts/create_git_branch/</guid>
+      <guid>https://yeunyuankuo.github.io/posts/git_create_branch/</guid>
       <description>We can push our new branch to the repository with the git push command. But here we also want to set the upstream branch. Every time a new branch is created, we need to set up an upstream branch so the new branch knows which remote repository to use every time it synchronizes its commit history. This step can be achieved with the &amp;ndash;set-upstream command.</description>
     </item>
     

@@ -8,10 +8,10 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Aug 2022 18:59:10 +0800</lastBuildDate><atom:link href="https://yeunyuankuo.github.io/categories/interview/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Why is goroutine being called a “lightweight” thread?</title>
-      <link>https://yeunyuankuo.github.io/posts/goroutine_lightweight/</link>
+      <link>https://yeunyuankuo.github.io/posts/go_goroutine_lightweight/</link>
       <pubDate>Fri, 12 Aug 2022 18:59:10 +0800</pubDate>
       
-      <guid>https://yeunyuankuo.github.io/posts/goroutine_lightweight/</guid>
+      <guid>https://yeunyuankuo.github.io/posts/go_goroutine_lightweight/</guid>
       <description>I was asked this question in one of my recent software engineer job interviews, and I believe I didn’t answer it as well as I would have liked, so I wanted to write this blog to re-answer it and perhaps aid someone else who is also curious about the solution.</description>
     </item>
     
