@@ -18,7 +18,7 @@
 }
 
 .initial-navbar .navbar-brand {
-  color: #c0ccda;
+  color: white;
   font-weight: 600;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .initial-navbar .navbar-nav .active {
-  color: #f9fafc;
+  color: white;
   /* transition: all 0.3s ease-out; */
   border-bottom: 1px solid #f9fafc;
   /* transform: translateY(-2px); */
@@ -101,6 +101,10 @@
   ); */
 }
 
+.final-navbar li a:active {
+  color: #2098d1 !important;
+}
+
 .navbar-collapse.show li a,
 .navbar-collapse.collapsing li a {
   color: #1c2d41;
@@ -117,6 +121,9 @@
   margin-top: 10px;
 }
 
+#posts-menu {
+  margin: 0px !important;
+}
 /* --- state after scroll end --- */
 
 #top-navbar-divider {

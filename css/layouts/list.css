@@ -130,9 +130,18 @@
 /* ============= Device specific fixes ======= */
 
 /* Large screens such as TV */
-@media only screen and (min-width: 1824px) {
+@media only screen and (min-width: 2270px) {
   .content-section {
     padding: 0px 17%;
+    width: 100%;
+  }
+  .post-card-holder .post-card {
+    width: calc(100% / 4);
+  }
+}
+@media only screen and (max-width: 2270px) {
+  .content-section {
+    padding: 0px 10%;
     width: 100%;
   }
   .post-card-holder .post-card {
@@ -244,6 +253,41 @@
 /* Medium devices (tablets, 768px and up) */
 
 @media only screen and (max-width: 768px) {
+  .wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    flex-flow: column;
+    overflow: hidden;
+  }
+  .content-section {
+    /* flex: 100%; */
+    width: 100%;
+    /* padding: 0px 100px; */
+  }
+
+  .content {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    transition: all ease-out 0.3s;
+  }
+
+  .content-section.hide .content {
+    margin-top: 0;
+    padding-top: 0;
+    transition: all ease-out 0.3s;
+  }
+
+  .content-section.hide .post-card-holder {
+    margin-top: 0.5rem;
+    transition: all ease-out 0.3s;
+  }
+
+  .post-card-holder .post-card {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 100%;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */

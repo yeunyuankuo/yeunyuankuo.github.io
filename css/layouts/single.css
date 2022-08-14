@@ -473,6 +473,70 @@ blockquote p {
   margin-bottom: 0px !important;
 }
 
+/* ============= Related Post Card =========== */
+#card-title {
+  font-weight: bold !important;
+}
+#card-date {
+  font-family: "Roboto Mono", "Roboto", "Inter"
+}
+#card-desc {
+  font-weight: 300;
+  color: black;
+}
+
+#card {
+  border-radius: 0 !important;
+  border: 0px !important;
+  padding: 10px 15px;
+}
+#card-body {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#card-footer {
+  padding: 5px 0px;
+  border-top: 0px !important;
+}
+
+.recent-posts-section .container {
+  padding-top: 1rem;
+}
+
+.recent-posts-section h1 > span{
+  margin-top: -55px;  /* Size of fixed header */
+  padding-bottom:55px; 
+  display: block; 
+}
+
+.recent-posts-section .card .card-footer span {
+  font-size: 10pt;
+  color: black !important;
+  padding-top: 5px;
+}
+
+.recent-posts-section .card .card-footer {
+  background: #fff;
+  margin-top: auto;
+}
+
+.recent-posts-section .post-card-link {
+  text-decoration: none;
+}
+
+.post-summary {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* line-height: 24px;     fallback */
+  max-height: 144px; /* fallback */
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+
 /* ============= Device specific fixes ======= */
 
 /* Large screens such as TV */
@@ -575,6 +639,14 @@ blockquote p {
   #scroll-to-top {
     right: 8rem;
   }
+
+  /* Recent Posts Card */
+  .recent-posts-section .container {
+    max-width: 100%;
+  }
+  .recent-posts-section .post-card {
+    width: 50%;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -660,6 +732,11 @@ blockquote p {
   #disqus_thread,
   .dsq-brlink {
     padding: 5px;
+  }
+
+  /* Recent Posts Card */
+  .recent-posts-section .post-card {
+    width: 100%;
   }
 }
 
